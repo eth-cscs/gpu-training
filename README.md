@@ -30,23 +30,23 @@ OpenACC is a set of extensions to both C/C++ and Fortran. So users of both langu
 
 The start and end times on each day are adjusted to give people who want to travel to/from Lugano the time to do so.
 
-Thursday : 10:00 am - 5:30 pm
-Friday   :  8:30 am - 4:00 pm
+- Thursday : 10:00 am - 5:30 pm
+- Friday   :  8:30 am - 4:00 pm
 
 Note that there will be coffee breaks and practical sessions in the schedule below.
 
 ### Thursday
 
-10:00 - 12:00  Introduction to GPUs and CUDA
-12:00 - 12:30  Lunch
-12:30 - 17:30  Introduction CUDA
+- 10:00 - 12:00  Introduction to GPUs and CUDA
+- 12:00 - 12:30  Lunch
+- 12:30 - 17:30  Introduction CUDA
 
 ### Friday
 
- 8:30 - 10:00  Introduction to CUDA
-10:15 - 12:00  Introduction to OpenACC
-12:00 - 12:30  Lunch
-12:30 - 16:00  Introduciton to OpenACC
+-  8:30 - 10:00  Introduction to CUDA
+- 10:15 - 12:00  Introduction to OpenACC
+- 12:00 - 12:30  Lunch
+- 12:30 - 16:00  Introduciton to OpenACC
 
 ## Topics
 
