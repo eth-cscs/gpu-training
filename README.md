@@ -67,7 +67,7 @@ Each section, except for the introduction to GPU computing, will involve hands o
 1. __Overview of the OpenACC programming paradigm__. What are the differences between CUDA and OpenACC, what are the strengths/weaknesses and what kind of development is OpenACC well suited for? Overview of the OpenACC execution model.
 2. __OpenACC directives__. Syntax, conditional compilation. What classes of directives exist and how are they used.
 3. __Data scoping__. How to manage data access of the GPU threads to objects in device memory.
-4. __ Data transfers__. How to handle data transfers between host and device and how to optimize these.
+4. __Data transfers__. How to handle data transfers between host and device and how to optimize these.
 5. __Kernels__. How to write kernels and some options for performance tuning.
 6. __Reduction operations__. How to use reductions in OpenACC and some caveats about synchronisation. 
 7. __CUDA interoperability__. How to call CUDA kernels from OpenACC code and use data already present on the device.
