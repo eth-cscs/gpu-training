@@ -60,3 +60,15 @@ Each section, except for the introduction to GPU computing, will involve hands o
 4. __Scaling Up with Thread Blocks__. Using thread blocks to utilize all resources on the GPU. For the practical the participants will extend the vector addition kernel to take advantage of massive parallelism.
 5. __Coordination Between Threads__. Overview of mechanisms provided by CUDA for getting threads to communicate and coordinate. Practical examples with shared memory include pipelined stencils and a dot product.
 6. __Concurrent Code__. Review of the different opportunities for task-based paralellism, include concurrent kernels, memory transactions and host-device concurrency. The practicals include streaming workload implementation.
+
+
+### Introduction to OpenACC
+
+1. __Overview of the OpenACC programming paradigm__. What are the differences between CUDA and OpenACC, what are the strengths/weaknesses and what kind of development is OpenACC well suited for? Overview of the OpenACC execution model.
+2. __OpenACC directives__. Syntax, conditional compilation. What classes of directives exist and how are they used.
+3. __Data scoping__. How to manage data access of the GPU threads to objects in device memory.
+4. __ Data transfers__. How to handle data transfers between host and device and how to optimize these.
+5. __Kernels__. How to write kernels and some options for performance tuning.
+6. __Reduction operations__. How to use reductions in OpenACC and some caveats about synchronisation. 
+7. __CUDA interoperability__. How to call CUDA kernels from OpenACC code and use data already present on the device.
+8. __Asynchronous operations in OpenACC__. How to overlap different operations on the accelerator and transfers between host and device memory? 
