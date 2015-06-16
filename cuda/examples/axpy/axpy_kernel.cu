@@ -7,7 +7,7 @@
 #include "CudaEvent.h"
 #include "CudaStream.h"
 
-// TODO: CUDA kernel implementing axpy:
+// TODO CUDA kernel implementing axpy
 //      y = y + alpha*x
 //void axpy(int n, double alpha, const double *x, double* y)
 
@@ -44,15 +44,15 @@ int main(int argc, char** argv) {
     auto time_H2D = get_time() - start;
 
     // TODO calculate grid dimensions
-    //auto block_dim = 
-    //auto grid_dim  = 
+    // ignore for the first kernel writing exercise
 
     // the cudaThreadSynchronize() functions synchronize the host and device
     // so that the timings are accurate
     cudaThreadSynchronize();
 
     start = get_time();
-    // TODO call kernel
+    // TODO launch kernel
+    // pass parameters such that alpha=2.0
     cudaThreadSynchronize();
     auto time_axpy = get_time() - start;
 
