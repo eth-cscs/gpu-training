@@ -58,8 +58,9 @@ T* malloc_device(size_t n) {
 // copy n*T from host to device
 template <typename T>
 void copy_to_device(T* from, T* to, size_t n) {
-    // TODO
-    // implement the function body (see copy_to_host() example below)
+    auto status =
+        cudaMemcpy(to, from, n*sizeof(T), cudaMemcpyHostToDevice);
+    cuda_check_status(status);
 }
 
 // copy n*T from device to host
