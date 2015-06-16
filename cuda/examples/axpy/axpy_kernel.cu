@@ -4,8 +4,6 @@
 //#include <cuda_runtime.h>
 
 #include "util.h"
-#include "CudaEvent.h"
-#include "CudaStream.h"
 
 // TODO CUDA kernel implementing axpy
 //      y = y + alpha*x
