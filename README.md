@@ -1,5 +1,37 @@
 # CSCS GPU Training
 
+## Getting started on CSCS systems
+
+To log on
+
+    ssh username@daint
+    
+and enter password when prompted (username and password are on handout presented at the start of the course).
+
+You need to use the scratch file sytem
+
+    cd $SCRATCH
+
+Clone the code
+
+    git clone https://github.com/eth-cscs/gpu-training.git
+    cd gpu-training
+
+Set up the environment
+
+    module swap PrgEnv-cray PrgEnv-gnu
+    module load cudatoolkit
+
+Try to compile the first examples
+
+    cd cuda/examples/axpy
+    make
+
+To run the executable you need to get an allocation, then run the executable with aprun
+
+    salloc
+    aprun ./axpy_cublas
+
 ## Requirements
 
 ### Laptops
