@@ -28,7 +28,7 @@ double dot_gpu(const double *x, const double* y, int n) {
 }
 
 int main(int argc, char** argv) {
-    size_t pow    = read_arg(argc, argv, 1, 20);
+    size_t pow    = read_arg(argc, argv, 1, 4);
     size_t n = (1 << pow);
 
     auto size_in_bytes = n * sizeof(double);
