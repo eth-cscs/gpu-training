@@ -4,7 +4,7 @@
 
 To log on
 
-    ssh username@daint
+    ssh course50@daint
     
 and enter password when prompted (username and password are on handout presented at the start of the course).
 
@@ -29,7 +29,7 @@ Try to compile the first examples
 
 To run the executable you need to get an allocation, then run the executable with aprun
 
-    salloc
+    salloc --reservation=gpucourse
     aprun ./axpy_cublas
 
 ## Requirements
