@@ -49,8 +49,8 @@ int main(int argc, char** argv) {
     cudaThreadSynchronize();
 
     start = get_time();
-    // TODO launch kernel
-    // pass parameters such that alpha=2.0
+    // TODO launch kernel (alpha=2.0)
+
     cudaThreadSynchronize();
     auto time_axpy = get_time() - start;
 
