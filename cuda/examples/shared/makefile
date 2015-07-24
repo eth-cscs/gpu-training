@@ -3,7 +3,7 @@ GCC_FLAGS=-std=c++11 -O3 -fopenmp
 
 LINK=-lcublas -lcuda
 
-CUDA_BENCHMARKS= blur.cuda blur_twice.cuda dot.cuda
+CUDA_BENCHMARKS= blur.cuda blur_twice.cuda dot.cuda string_reverse.cuda
 OPENMP_BENCHMARKS= blur_twice.omp
 
 all : $(CUDA_BENCHMARKS) $(OPENMP_BENCHMARKS)
@@ -19,6 +19,9 @@ blur_twice.cuda : blur_twice.cu util.h
 
 dot.cuda : dot.cu util.h
 	nvcc $(NVCC_FLAGS) dot.cu -o dot.cuda $(LINK)
+
+string_reverse.cuda : string_reverse.cu util.h
+	nvcc $(NVCC_FLAGS) string_reverse.cu -o string_reverse.cuda $(LINK)
 
 #----------------------------------------
 # openmp benchmarks
