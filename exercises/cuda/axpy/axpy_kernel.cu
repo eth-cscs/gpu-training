@@ -42,6 +42,7 @@ int main(int argc, char** argv) {
     auto time_H2D = get_time() - start;
 
     // TODO calculate grid dimensions
+    // don't try to use cudaOccupancyMaxPotentialBlockSize the first time
     // ignore for the first kernel writing exercise
 
     // the cudaThreadSynchronize() functions synchronize the host and device
