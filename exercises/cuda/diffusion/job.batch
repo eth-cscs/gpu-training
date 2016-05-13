@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --job-name="summer-school-mpi-g2g"
+#SBATCH --job-name="gp-training-mpi-g2g"
 #SBATCH --nodes=16
 #SBATCH --output=job%j.out
-#SBATCH --reservation=summerschool
+#SBATCH --reservation=??todo??
 #SBATCH --time=00:10:00
 
 for ranks in 1 2 4 8 16
