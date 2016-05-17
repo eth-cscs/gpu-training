@@ -34,25 +34,25 @@ void newton_host(int n, double *x) {
 int main(int argc, char** argv) {
     size_t pow        = read_arg(argc, argv, 1, 20);
 
-    size_t N = 1 << pow;
-    auto size_in_bytes = N * sizeof(double);
+    size_t n = 1 << pow;
+    auto size_in_bytes = n * sizeof(double);
 
-    std::cout << "memory copy overlap test of length N = " << N
+    std::cout << "memory copy overlap test of length n = " << n
               << " : " << size_in_bytes/(1024.*1024.) << "MB"
               << std::endl;
 
     cuInit(0);
 
-    double* xd = malloc_device<double>(N);
-    double* xh = malloc_host<double>(N, 1.5);
-    double* x  = malloc_host<double>(N);
+    double* xd = malloc_device<double>(n);
+    double* xh = malloc_host<double>(n, 1.5);
+    double* x  = malloc_host<double>(n);
 
     // compute kernel launch configuration
     auto block_dim = 128;
-    auto grid_dim = (N+block_dim-1)/block_dim;
+    auto grid_dim = (n+block_dim-1)/block_dim;
 
     auto time_h2d = -get_time();
-    copy_to_device(xh, xd, N);
+    copy_to_device(xh, xd, n);
     time_h2d += get_time();
 
     cudaThreadSynchronize();
@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
     time_kernel += get_time();
 
     auto time_d2h = -get_time();
-    copy_to_host(xd, x, N);
+    copy_to_host(xd, x, n);
     time_d2h += get_time();
 
     std::cout << "-------\ntimings\n-------" << std::endl;
@@ -72,7 +72,7 @@ int main(int argc, char** argv) {
 
     // check for errors
     auto errors = 0;
-    for(auto i=0; i<N; ++i) {
+    for(auto i=0; i<n; ++i) {
         if(std::fabs(f(x[i]))>1e-10) {
             errors++;
         }
