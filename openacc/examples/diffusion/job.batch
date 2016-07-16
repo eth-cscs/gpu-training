@@ -1,0 +1,6 @@
+#!/bin/bash -l
+
+#SBATCH --nodes=4
+#SBATCH --exclusive
+
+srun ./diffusion2d.openacc.fort.mpi 18
